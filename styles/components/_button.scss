@@ -19,7 +19,7 @@
 
   &.transparent {
     color: var(--color-dark);
-    background-color: transparent;
+    background-color: var(--color-light);
 
     @include hover {
       color: var(--color-light);
