@@ -1,11 +1,22 @@
+@use '../helpers' as *;
+
 .header {
-  padding-block: 14px;
+  @include mobile-s-above {
+    padding-block: 14px;
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 48px;
+  }
+
+  &__logo {
+    @include mobile-s {
+      width: 100px;
+      height: 20px;
+    }
   }
 
   &__menu {
