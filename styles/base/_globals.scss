@@ -52,3 +52,8 @@ h3, .h3 {
   font-size: 24px;
   line-height: 1.4;
 }
+
+::selection {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
