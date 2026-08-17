@@ -1,0 +1,24 @@
+.header {
+  padding-block: 14px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 48px;
+  }
+
+  &__menu {
+    margin-left: auto;
+
+    &-list {
+      display: flex;
+      column-gap: 48px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    column-gap: 24px;
+  }
+}
