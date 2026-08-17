@@ -1,0 +1,29 @@
+@use '../helpers' as *;
+
+.button {
+  @include flex-center(true);
+
+  height: var(--button-height);
+  padding-inline: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  border-radius: var(--border-radius);
+
+  @include hover {
+    color: var(--color-dark);
+    background-color: transparent;
+  }
+
+  &.transparent {
+    color: var(--color-dark);
+    background-color: transparent;
+
+    @include hover {
+      color: var(--color-light);
+      background-color: var(--color-dark);
+    }
+  }
+}
