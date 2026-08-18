@@ -30,10 +30,6 @@
   --header-height: 73px;
 
   @include tablet {
-    --section-padding-y: 70px;
-  }
-
-  @include mobile {
-    --section-padding-y: 30px;
+    --section-padding-y: 64px;
   }
 }
