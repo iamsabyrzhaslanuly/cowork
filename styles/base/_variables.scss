@@ -1,3 +1,5 @@
+@use '../helpers' as *;
+
 :root {
   --color-light: #fff;
   --color-dark: #1d1e1c;
@@ -26,4 +28,12 @@
   --transition-duration: 0.2s;
 
   --header-height: 73px;
+
+  @include tablet {
+    --section-padding-y: 70px;
+  }
+
+  @include mobile {
+    --section-padding-y: 30px;
+  }
 }
