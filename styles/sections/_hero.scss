@@ -1,0 +1,46 @@
+@use '../helpers' as *;
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+
+  &__title {
+    max-width: 640px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &-accent {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        top: 50%;
+        left: 50%;
+        width: 120%;
+        height: 140%;
+        translate: -50% -50%;
+        background: url('../../images/hero-title-text-circle.svg') center / contain no-repeat;
+      }
+    }
+  }
+
+  &__description {
+    max-width: 480px;
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__image {
+    border-radius: var(--border-radius-large);
+  }
+}
