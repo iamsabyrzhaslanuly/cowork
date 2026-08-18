@@ -1,13 +1,11 @@
 @use '../helpers' as *;
 
 .header {
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 48px;
-    min-height: var(--header-height);
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 48px;
+  min-height: var(--header-height);
 
   &__logo {
     @include mobile {
