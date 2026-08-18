@@ -1,0 +1,46 @@
+@use '../helpers' as *;
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 80px;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 768px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      display: inline-flex;
+      column-gap: 12px;
+
+      &::before {
+        content: '';
+        width: 180px;
+        height: 58px;
+        background: url('../../images/features/title-rectangle.jpg') center / contain no-repeat;
+      }
+    }
+  }
+
+  &__description {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
