@@ -5,4 +5,52 @@
 }
 
 .features {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+    text-align: center;
+  }
+
+  &__icon-wrapper {
+    @include square(48px);
+
+    position: relative;
+
+    &::before {
+      @include square(36px);
+
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: -1;
+      border-radius: 50%;
+    }
+
+    &--green::before {
+      background-color: var(--color-green);
+    }
+
+    &--blue::before {
+      background-color: var(--color-blue);
+    }
+
+    &--pink::before {
+      background-color: var(--color-pink);
+    }
+  }
+
+  &__icon {
+    @include square(48px);
+
+    position: relative;
+  }
 }
