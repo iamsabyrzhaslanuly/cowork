@@ -43,4 +43,23 @@
       margin-bottom: 40px;
     }
   }
+
+  &__video {
+    border-radius: var(--border-radius-large);
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &-play-button {
+      @include reset-button;
+      @include abs-center;
+
+      position: absolute;
+
+      @include hover {
+        opacity: 0.8;
+      }
+    }
+  }
 }
