@@ -1,3 +1,65 @@
+@use '../helpers' as *;
+
 .section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
   padding-block: var(--section-padding-y);
+
+  @include tablet {
+    row-gap: 40px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 768px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__subtitle {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 12px;
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 1.4;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      display: contents;
+
+      &::before {
+        content: '';
+        width: 180px;
+        height: 58px;
+        background: url('../../images/virtual-tour/title-rectangle.jpg') center / contain no-repeat;
+
+        @include mobile {
+          width: 120px;
+        }
+      }
+    }
+  }
+
+  &__description {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
 }
