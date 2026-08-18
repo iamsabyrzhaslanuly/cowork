@@ -48,7 +48,7 @@
         content: '';
         width: 180px;
         height: 58px;
-        background: url('../../images/virtual-tour/title-rectangle.jpg') center / contain no-repeat;
+        background: var(--section-title-rectangle) center / contain no-repeat;
 
         @include mobile {
           width: 120px;
