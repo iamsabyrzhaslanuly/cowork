@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.social-proof {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
+  padding-block: 80px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+  }
+}
