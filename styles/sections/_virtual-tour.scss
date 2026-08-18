@@ -1,5 +1,9 @@
 @use '../helpers' as *;
 
+.section--virtual-tour {
+  --section-title-rectangle: url('../../images/virtual-tour/title-rectangle.jpg');
+}
+
 .virtual-tour {
   &__video {
     border-radius: var(--border-radius-large);
